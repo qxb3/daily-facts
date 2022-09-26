@@ -39,7 +39,7 @@ async function postRandomFact(fact) {
 function main() {
   logger.info('App Started')
 
-  cron.schedule('30 * * * *', async () => {
+  cron.schedule(process.env.CRON, async () => {
     const randomFacts = await getRandomFact(10)
     for (const { fact } of randomFacts) {
       postRandomFact(fact)
