@@ -1,0 +1,21 @@
+{
+  "name": "daily-facts",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "node-cron": "^3.0.2",
+    "pino": "^8.6.0",
+    "pino-pretty": "^9.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
