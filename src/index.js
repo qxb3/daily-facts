@@ -2,16 +2,7 @@ require('dotenv/config')
 
 const axios = require('axios')
 const cron = require('node-cron')
-const pino = require('pino')
-
-const logger = pino({
-  transport: {
-    target: 'pino-pretty',
-    options: {
-      include: 'time,level'
-    }
-  }
-})
+const logger = require('./logger')
 
 async function getRandomFact(count = 1) {
   try {
