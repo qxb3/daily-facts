@@ -9,7 +9,7 @@ function main() {
   logger.info('App Started')
 
   scheduler(process.env.CRON, async () => {
-    const randomFacts = await getRandomFact()
+    const randomFacts = await getRandomFact(process.env.CALLS_PER_TIME || 1)
     for (const { fact } of randomFacts) {
       await postRandomFact(`Did you know? - ${fact}`)
     }
