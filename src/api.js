@@ -1,3 +1,4 @@
+const axios = require('axios')
 const logger = require('./logger')
 
 async function getRandomFact(count = 1) {
