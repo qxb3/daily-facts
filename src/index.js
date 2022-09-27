@@ -11,7 +11,7 @@ function main() {
   scheduler(process.env.CRON, async () => {
     const randomFacts = await getRandomFact()
     for (const { fact } of randomFacts) {
-      postRandomFact(fact)
+      await postRandomFact(`Did you know? - ${fact}`)
     }
 
     logger.info('Posted a random fact')
